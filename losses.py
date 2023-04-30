@@ -69,7 +69,7 @@ class L1Loss(nn.Module):
     Loss based on manhattan distance
     """
     def __init__(self):
-        super(PerPixelLoss, self).__init__()
+        super(L1Loss, self).__init__()
 
     def forward(self, outputs, targets):
         return torch.mean(torch.abs(targets - outputs))
