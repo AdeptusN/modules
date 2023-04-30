@@ -1,3 +1,6 @@
+'''Custom transforms by AdeptusN'''
+
+
 import torch
 
 
