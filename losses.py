@@ -1,4 +1,4 @@
-'''Custom losses by AdeptusN'''
+"""Custom losses by AdeptusN"""
 
 
 import torch
@@ -76,6 +76,9 @@ class L1Loss(nn.Module):
 
 
 class VAELoss(nn.Module):
+    """
+    Loss for variational autoencoder
+    """
     def __init__(self, recon_coeff=1, kld_coeff=0.5, recon_loss=nn.MSELoss()):
         """
 

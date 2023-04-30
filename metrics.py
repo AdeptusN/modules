@@ -1,4 +1,4 @@
-'''Custom metrics by AdeptusN'''
+"""Custom metrics by AdeptusN"""
 
 
 import torch
@@ -40,7 +40,7 @@ class DiceScoreBin(nn.Module):
 
     """
     def __init__(self, smooth=1):
-        super(DiceLossBin, self).__init__()
+        super(DiceScoreBin, self).__init__()
         self.smooth = smooth
 
     def forward(self, inputs, targets):

@@ -1,4 +1,4 @@
-'''Custom transforms by AdeptusN'''
+"""Custom transforms by AdeptusN"""
 
 
 import torch

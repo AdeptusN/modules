@@ -1,4 +1,4 @@
-'''Custom convolutional NN modules by AdeptusN'''
+"""Custom convolutional NN modules by AdeptusN"""
 
 
 import torch
