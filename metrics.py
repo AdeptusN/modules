@@ -9,8 +9,6 @@ class IoUMetricBin(nn.Module):
     """
     Metric for binary segmentation
 
-    Class of Intersection over Union metric
-
     It is calculated as the ratio between the overlap of
     the positive instances between two sets, and their mutual combined values
 
@@ -32,3 +30,23 @@ class IoUMetricBin(nn.Module):
 
         return IoU
 
+
+class DiceScoreBin(nn.Module):
+    """
+    Metric for binary segmentation
+
+    DSC(A, B) = 2 |A and B| / (|A| + |B|)
+
+    """
+    def __init__(self, smooth=1):
+        super(DiceLossBin, self).__init__()
+        self.smooth = smooth
+
+    def forward(self, inputs, targets):
+        inputs = inputs.view(-1)
+        targets = targets.view(-1)
+
+        intersection = (inputs * targets).sum()
+        dice = (2 * intersection + self.smooth) / (inputs.sum() + targets.sum())
+
+        return dice
