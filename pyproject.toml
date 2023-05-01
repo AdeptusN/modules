@@ -1,0 +1,14 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name="AdeptusN_modules"
+version="0.0.1"
+description="Repository of NN modules, metrics, losses and transforms by AdeptusN"
+readme="README.md"
+requires-python = ">=3.7"
+dynamic = ["dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
